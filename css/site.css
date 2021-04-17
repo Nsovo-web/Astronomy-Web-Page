@@ -1,0 +1,40 @@
+
+
+.top-space{
+    height: 10rem;
+
+}
+
+.top-space2{
+    height: 4rem;
+
+}
+
+.card-body img{
+    height:100%;
+    width: 100%;
+}
+
+.cust-back{
+    background-image: url(/assets/42bcd592d8f14d33f42e2e34f000d2a9.jpg);
+    background-size: cover;
+}
+
+
+.transparant{
+    opacity: 0.98;
+    
+}
+
+.modal{
+    opacity: 0.96;
+}
+
+.resize{
+    visibility: hidden;
+}
+
+canvas{
+    z-index: inherit;
+}
+
