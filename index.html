@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Astronomical</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/neo.css">
+
+  <link rel="stylesheet" href="css/site.css">
+
+</head>
+
+<body class="bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top  pb-0 border-bottom border-secondary" role="navigation">
+        <a class="navbar-brand mb-0" href="#picOfTheDay"><h1>Astronomical</h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="ml-auto collapse navbar-collapse nav-tabs mt-auto mb-0 nav-justified" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-10 mb-0 nav-justified">
+            
+            <li class="nav-item  ">
+              <a class="nav-link border-right text-nowrap btn-outline-dark" href="#picOfTheDay">Feature Of The Day </a>
+            </li>
+           
+            <li class="nav-item ">
+              <a class="nav-link border-right text-nowrap btn-outline-dark" href="#near-earth-Objects">Near Earth Objects</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link  text-nowrap btn-outline-dark" href="#Analytics">Analytics</a>
+            </li>
+          </ul>
+         
+        </div>
+        <form class="mr-0 collapse navbar-collapse ml-auto form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" onclick="filter">Search</button>
+        </form>
+      </nav>
+       <div class="top-space"></div>
+       <!--Pic Of The Day Section--> 
+      <secction id="picOfTheDay" class="mt-5 ">
+           <div class="container">
+            <div class="card text-center  bg-dark text-light">
+              <div class="card-header">
+                Featured Today <br>
+                Date: <span id="date" class="date"></span> <br>
+                
+              </div>
+              <div class="card-body bg-secondary">
+                <h5 id="pod-title" class="card-title">Special title treatment</h5>
+                <img id="img-pod" src="..." class="card-img-top " alt="...">
+                <video id="video-pod" src="" type="video" controls></video>
+              </div>
+
+              <div id="explanation" class="card-footer text-muted">
+                
+              </div>
+            </div>
+           </div>
+      </section>
+    
+      <div class="top-space"></div>
+       <!-- NEAR ERTH OBJECTS SECTION-->
+      <section id="near-earth-Objects" >
+         <div class="container ">
+            
+           
+            <h1 >  Near Earth Objects</h1>
+           
+           <div class="top-space2"></div>
+
+              <div class="row  mt-10 cust-back" data-asteroids>
+                
+              
+              </div>
+              <template data-previous-ast-template class="asteroid-temp">
+                <div class="col-md-6 col-lg-3 mb-5">
+                  <div class="card transparant bg-dark text-light">
+                    <div class="card-body">
+                      <h4 class="card-title" data-asteroid-name>Asteroid Name</h4>
+                      <img src="./assets/04af3e4ba07ab078f737596a9dd89484.jpg">
+                      <h6>Diameter: <span class="asteroid-size" data-asteroid-diameter></span> km</h6>
+                      <p class="card-text">Potentially Hazardous? :<span class="isHazardous" data-isHazardous></span></p>
+                       <!-- Button trigger modal -->
+                        <button id="more-info" type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter" data-more-info>
+                          More Information
+                        </button>
+                    </div>
+                  </div>
+                </div>
+               
+              </template>
+
+               <!-- Modal -->
+               <div class="modal  fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered " role="document">
+                  <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle">Name: <span class="current-asteroid" data-modal-name></span></h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <h6 class="">Date Recorded: <br> <span class="date-recorded" data-modal-date></span></h6>
+                      <h6 class="">Diameter:  <span class="size" data-modal-size></span></h6>
+                      <h6 class="">Absolute Magnitude:  <span class="mag-size" data-modal-abs-mag></span></h6>
+                      <h6 class="">Relative-Velocity:  <span class="relative-velocity" data-modal-velocity></span></h6>
+                      <h6 class="">Close Approach Date: <br> <span class="close-approach-date" data-close-approach-date></span></h6>
+                      <h6 class="">Miss Distance:  <span class="miss-distance" data-miss-distance></span></h6>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                   </div>
+                  </div>
+                </div>
+           </div>
+         </section>
+         
+           
+            <!-- NEAR ERTH OBJECTS Analytics SECTION-->
+            <div class="top-space2"></div>
+            <section class="vh-100" id="Analytics">
+              <div class="container">
+      
+                    <h1 >  Near Earth Objects Analytics</h1>
+                    
+                    
+                    <canvas id="size-speed" class="mb-5" width="400" height="400"></canvas>
+                    <canvas id="size-miss-distance" width="400" height="400"></canvas>
+        
+              </div>
+      
+            </section>
+
+     
+      
+
+  <footer>
+
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
+
+
+  <script src="js/site.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+</html>
